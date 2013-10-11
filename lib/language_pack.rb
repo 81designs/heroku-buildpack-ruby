@@ -39,3 +39,14 @@ require "language_pack/no_lockfile"
 require "language_pack/helpers/bundler_wrapper"
 
 
+
+
+# heroku logs --tail -a peaceful-ravine-5072
+
+token       = "t.448d52a3-82a0-4c4c-8e62-98446b362090"
+logplex_url = "https://east.logplex.io/logs"
+
+# ENV['LOGPLEX_DEFAULT_TOKEN'] = token
+# ENV['LOGPLEX_URL']           = logplex_url
+
+$MYOUT = Lpxc.new(default_token: token, logplex_url: logplex_url)
