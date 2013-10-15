@@ -1,13 +1,13 @@
 #!/usr/bin/env ruby
 
+# sync output
+$stdout.sync = true
+
 $:.unshift File.expand_path("../../lib", __FILE__)
 require "language_pack"
 
-$MYOUT.puts "Release: #{Time.now}"
-$MYOUT.send :flush
-
 LanguagePack::Instrument.trace 'release', 'app.release' do
-  STDOUT.puts LanguagePack::Base.release
+  Dir.chdir(ARGV.first) do
+    puts LanguagePack::Base.release
+  end
 end
-
-$MYOUT.send :flush

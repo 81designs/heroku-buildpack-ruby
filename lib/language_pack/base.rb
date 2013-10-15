@@ -99,10 +99,6 @@ class LanguagePack::Base
   # collection of values passed for a release
   # @return [String] in YAML format of the result
   def self.release
-    $MYOUT.puts "running #{self}.release"
-    $MYOUT.puts "ls: #{`ls`}"
-    $MYOUT.puts "ls tmp: #{`ls tmp`}"
-
     instrument "base.release" do
       return File.read("tmp/heroku-buildpack-release-step.yml")
     end
