@@ -1,3 +1,39 @@
+## Master
+
+## v84 (11/06/2013)
+
+Bugfixes:
+
+* Fix default gem cache
+
+
+## v83 (10/29/2013)
+
+Features:
+
+* RubyVersion extracted into its own class
+* Release no longer requires language_pack
+* Detect no longer requires language_pack
+* Downloads with curl now retry on failed connections, pass exit status appropriately
+
+Bugfixes:
+
+* Errors in Gemfiles will no longer show up as bad ruby versions #36
+* Fix warning warning libjffi-1.2.so on < JRuby 1.7.3
+
+## v82 (10/28/2013)
+
+Bugfixes:
+
+* Rails 3 deploys that do not successfully run `assets:precompile` will now fail.
+
+## v81 (10/15/2013)
+
+Features:
+
+* add Default Bundler Cache for new Ruby 2.0.0 apps
+* use Virginia S3 bucket instead of Cloudfront
+
 ## v80 (9/23/2013)
 
 Features:
